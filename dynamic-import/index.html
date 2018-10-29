@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>My library</title>
+<nav>
+  <a href="books.html" data-entry-module="books">Books</a>
+  <a href="movies.html" data-entry-module="movies">Movies</a>
+  <a href="video-games.html" data-entry-module="video-games">Video Games</a>
+</nav>
+<main>This is a placeholder for the content that will be loaded on-demand.</main>
+<script>
+  const main = document.querySelector('main');
+  const links = document.querySelectorAll('nav > a');
+  for (const link of links) {
+    link.addEventListener('click', async (event) => {
+      event.preventDefault();
+      try {
+        const module = await import(`/assets/js/${link.dataset.entryModule}.mjs`);
+        // The module exports a function named `loadPageInto`.
+        module.loadPageInto();
+      } catch (error) {
+        main.textContent = error.message;
+      }
+    });
+  }
+</script>
