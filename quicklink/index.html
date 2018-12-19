@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>QuickLink</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <a href="test/1.html">Link 1</a>
+  <a href="test/2.html">Link 2</a>
+  <a href="test/3.html">Link 3</a>
+
+  <script src="network-idle.js"></script>
+  <script type="module">
+    import quicklink from "./quicklink/index.mjs";
+    quicklink({ timeoutFn: networkIdleCallback });
+  </script>
+</body>
+</html>
