@@ -1,0 +1,48 @@
+.screen {
+  min-height: 100vh;
+  text-align:center;
+  text-transform: uppercase;
+  position: relative;
+}
+.screen h1 {
+  margin:0;
+  padding:0;
+  white-space: nowrap;
+  line-height: 100vh;
+  color: #fff;
+  font-size: 3.5em;
+}
+#first-screen {
+  background: rgb(0,106,221);
+}
+#second-screen {
+  background: rgb(255,25,129);
+}
+#fourth-screen {
+  background: #FFDF19;
+}
+#monitor {
+  position:fixed;
+  top: 1em;
+  right: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  background: #000;
+  font-family: monospace;
+  text-align: center;
+  line-height: 2.8em;
+}
+#isIntersecting {
+  color: #33ff00;
+  opacity: 0;
+  transition: opacity .2s linear;
+}
+img {
+  display: block;
+  max-width: none;
+  width: 100%;
+  height: 100%;
+  min-height: 100px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}

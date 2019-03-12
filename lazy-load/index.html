@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Lazy load</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.9.0/tachyons.min.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+<body>
+  <div class="screen" id="first-screen">
+    <h1>First screen</h1>
+  </div>
+  <div class="screen" id="second-screen">
+    <h1>Second Screen</h1>
+  </div>
+
+  <div class="screen pa3 pa4-ns w-100 w-80-ns center">
+    <main class="cf pa2">
+      <div class="fl w-100 w-50-ns ph2">
+        <a href="" class="pv2 grow db no-underline black">
+          <img class="db w-100" data-src="https://farm5.staticflickr.com/4616/39798634951_aa270731f6_k_d.jpg">
+        </a>
+        <a href="" class="pv2 grow db no-underline black">
+          <img class="db w-100" data-src="https://farm8.staticflickr.com/7364/9797687423_89d0b3040b_z_d.jpg">
+        </a>
+      </div>
+      <div class="fl w-50 w-25-ns ph2">
+        <a href="" class="pv2 grow db no-underline black">
+          <img class="db w-100" data-src="https://farm9.staticflickr.com/8713/16979768317_44c27d64c9_z_d.jpg">
+        </a>
+        <a href="" class="pv2 grow db no-underline black">
+          <img class="db w-100" data-src="https://farm2.staticflickr.com/1717/24895045945_d99447e642_b_d.jpg">
+        </a>
+        <a href="" class="pv2 grow db no-underline black">
+          <img class="db w-100" data-src="https://farm5.staticflickr.com/4745/38898563945_d3974144c0_z_d.jpg">
+        </a>
+      </div>
+      <div class="fl w-50 w-25-ns ph2">
+        <a href="" class="pv2 grow db no-underline black">
+          <img class="db w-100" data-src="https://farm2.staticflickr.com/1502/24195472655_bc7e4f3582_z_d.jpg">
+        </a>
+        <a href="" class="pv2 grow db no-underline black">
+          <img class="db w-100" data-src="https://farm6.staticflickr.com/5691/23446613226_6ac1a5b1a2_z_d.jpg">
+        </a>
+        <a href="" class="pv2 grow db no-underline black">
+          <img class="db w-100" data-src="https://farm2.staticflickr.com/1594/24342615229_4d407695ef_z_d.jpg">
+        </a>
+        <a href="" class="pv2 grow db no-underline black">
+          <img class="db w-100" data-src="https://farm4.staticflickr.com/3707/9288847355_3aa5800e92_z_d.jpg">
+        </a>
+      </div>
+    </main>
+  </div>
+
+  <div class="screen" id="fourth-screen">
+    <h1>Fourth Screen</h1>
+  </div>
+
+  <div id="monitor">
+    <div id="isIntersecting">
+      <span class="placeholder">0</span>
+      images loaded
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
