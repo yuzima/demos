@@ -1,6 +1,6 @@
 ## 使用 Loadable 和 Webpack 实现真正的 dynamic import
 
-在之前的 webpack 打包解析时，我已经了解了由于 webpack 需要将 `import` 命令解析到具体的问题上，因此使用 `import()` 语句时不能使用变量而必须是一个确定的文件路径，否则在 webpack 打包的时候会提示错误。
+在之前的 webpack 打包解析时，我已经了解了由于 webpack 需要将 `import` 命令解析到具体的文件上，因此使用 `import()` 语句时不能使用变量而必须是一个确定的文件路径，否则在 webpack 打包的时候会提示错误。
 
 因此在之前，使用 `react-loadable` 在运行时根据 props 不同加载不同的组件模块，是无法成功打包的。
 
