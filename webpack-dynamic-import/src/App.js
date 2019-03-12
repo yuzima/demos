@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import loadable from '@loadable/component'
 import logo from './logo.svg';
 import './App.css';
-const AsyncPage = loadable(props => import(`./${props.page}`))
+const AsyncPage = loadable(props => import(/* webpackChunkName: "AsyncPage-" */ `./components/${props.page}`))
 
 class App extends Component {
   render() {
